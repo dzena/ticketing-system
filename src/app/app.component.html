@@ -1,0 +1,13 @@
+<mat-sidenav-container class="side-nav-container">
+    <mat-sidenav mode="side" opened class="side-nav">
+        <ul>
+            <li><a routerLink="/tickets" routerLinkActive="active">Tickets</a></li>
+            <li><a routerLink="/users" routerLinkActive="active">Users</a></li>
+        </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="side-nav-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

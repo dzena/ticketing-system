@@ -1,0 +1,22 @@
+.side-nav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+.side-nav {
+    width: 180px;
+}
+
+.side-nav-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.active {
+    color: #fff;
+    background-color: purple;
+}

@@ -1,0 +1,1 @@
+<app-tickets-list [tickets]="tickets$ | async" (statusChanged)="onTicketStatusChange($event)" (submitChanged)="onAddTicketChange($event)"></app-tickets-list>

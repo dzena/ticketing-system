@@ -1,0 +1,29 @@
+<mat-nav-list>
+    <mat-list-item *ngFor="let ticket of tickets">
+        <a matLine [routerLink]="'/tickets/' + ticket?.id"
+           [class.ticket-done]="ticket?.completed">{{ ticket?.description }}</a>
+        <button mat-button
+                *ngIf="!ticket?.completed"
+                color="primary"
+                (click)="statusChanged.emit({id: ticket?.id, status: true})"
+        >
+            MARK AS COMPLETED
+        </button>
+    </mat-list-item>
+    <mat-list-item *ngIf="addNew" disableRipple>
+        <form matLine #form="ngForm" (ngSubmit)="submitChanged.emit(form.value); addNew = false">
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input matInput type="text" name="description" ngModel placeholder="Description">
+            </mat-form-field>
+        </form>
+        <button mat-button (click)="submitChanged.emit(form.value); addNew = false" color="primary">SAVE</button>
+        <button mat-button (click)="addNew = false" type="button" color="accent">CANCEL</button>
+    </mat-list-item>
+    <mat-list-item>
+        <span matLine></span>
+        <button mat-mini-fab (click)="addNew = true" color="primary">
+            +1
+        </button>
+    </mat-list-item>
+</mat-nav-list>

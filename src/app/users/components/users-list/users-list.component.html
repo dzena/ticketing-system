@@ -1,0 +1,5 @@
+<mat-nav-list>
+    <mat-list-item *ngFor="let user of users">
+        <a matLine [routerLink]="'/users/' + user.id">{{ user?.name }}</a>
+    </mat-list-item>
+</mat-nav-list>
