@@ -1,3 +1,5 @@
+class MyClass {
+  
 @Test
 fun testLbxupten() {
   UiTestCaseFactory.uiTestCase(
@@ -10198,3 +10200,4 @@ fun testOgceq() {
   ).execute()
 }
 
+}
