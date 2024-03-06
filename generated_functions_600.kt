@@ -4,8 +4,8 @@ class MyClass {
 fun testLbxupten() {
   UiTestCaseFactory.uiTestCase(
     summary = "Check Form Submission passes",
-    srs = arrayListOf("REQ-683"),
-    userStories = arrayListOf("USER-130"),
+    srs = arrayListOf("rq3"),
+    userStories = arrayListOf("rq1"),
     uiTestStepList = arrayListOf(
       page.testGreetingsTextShow(),
       page.clickOnNext(),
